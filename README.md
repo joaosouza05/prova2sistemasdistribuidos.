@@ -1,6 +1,10 @@
-# prova-pratica-sistemas-distribuidos-p2 
+# P2 - Sistemas Distribuídos
 
 João Gabriel de Souza Lima, respostas e explicações
+
+Professora: Simone Tatiane do Canto
+
+Data: 18/11/2026
 
 Evidencia 2
 
@@ -65,6 +69,8 @@ atualize os dados de forma segura.
 A sincronização deve acontecer depois do processamento dos pedidos, pois primeiro o servidor principal precisa atualizar o estoque com os descontos dos pedidos confirmados.
 
 Depois, a réplica recebe o valor atualizado. Dessa forma, se o servidor principal falhar, a réplica terá a informação mais recente do estoque.
+
+Aluno: João Gabriel de Souza Lima 
 
 
 
