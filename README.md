@@ -1,5 +1,7 @@
 # prova-pratica-sistemas-distribuidos-p2 
 
+João Gabriel de Souza Lima, respostas e explicações
+
 Evidencia 2
 
 Alteração no limite de concorrência
@@ -24,7 +26,7 @@ Foram realizadas três alterações no sistema:
 
 2. Sincronização: a função sincronizar() foi corrigida para copiar o estoque atualizado do servidor principal para a réplica, mantendo os dados iguais.
 
-3.Consulta de estoque: a função consultar_estoque() foi corrigida para consultar a réplica automaticamente quando o servidor principal estiver offline.
+3. Consulta de estoque: a função consultar_estoque() foi corrigida para consultar a réplica automaticamente quando o servidor principal estiver offline.
 
 Comportamento após as alterações: o sistema passou a respeitar o limite de dois pedidos simultâneos, manter o estoque da réplica atualizado e permitir consultas mesmo 
 
