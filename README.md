@@ -32,6 +32,38 @@ quando o
 
 servidor principal apresentar falhas.
 
+5. Questões:
+
+1. Qual é a função do semáforo no processamento de pedidos?
+
+O semáforo controla a quantidade de pedidos processados simultaneamente. No programa, foi configurado para permitir apenas dois pedidos ao mesmo tempo, conforme a regra 
+
+estabelecida pela empresa. Os demais precisam aguardar a liberação de uma vaga.
+
+2. Por que é necessário sincronizar os dados entre o servidor principal e a réplica?
+
+Para manter os dados atualizados e iguais nos dois servidores. Assim, se o servidor principal apresentar uma falha, a réplica poderá fornecer informações corretas sobre o 
+
+estoque.
+
+3. O que significa tolerância a falhas e como ela aparece neste programa?
+
+Tolerância a falhas é a capacidade de um sistema continuar funcionando mesmo quando ocorre uma falha em algum componente. No programa, isso acontece quando o servidor 
+
+principal fica offline e o sistema utiliza a réplica para consultar o estoque.
+
+4. Para que serve o Lock no programa e como o controle de acesso aos recursos ajuda a prevenir problemas de concorrência?
+
+O Lock impede que duas threads alterem o estoque ao mesmo tempo. Isso evita problemas como descontos duplicados ou valores incorretos no estoque, garantindo que cada pedido
+
+atualize os dados de forma segura.
+
+5. Considerando a sequência de eventos, a sincronização do estoque deve acontecer antes ou depois do processamento dos pedidos? Explique a relação de causalidade.
+
+A sincronização deve acontecer depois do processamento dos pedidos, pois primeiro o servidor principal precisa atualizar o estoque com os descontos dos pedidos confirmados.
+
+Depois, a réplica recebe o valor atualizado. Dessa forma, se o servidor principal falhar, a réplica terá a informação mais recente do estoque.
+
 
 
 
